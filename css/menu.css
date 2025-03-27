@@ -1,0 +1,315 @@
+*{
+    margin: 0 ;
+}
+
+body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #FFFAEE;
+    box-shadow: 0px 1px 10px #D7BFA5;
+    z-index: 10;
+
+}
+
+#logo {
+    width: 15vw;
+    margin-right: 5vw;
+    margin-left: 5vw;
+}
+
+
+#nav-menu.button-container {
+    display: flex;
+    gap: 5vw;
+    margin-left: 3vw;
+    flex-direction: row;
+    align-items: center;
+    transition: .4s;
+}
+
+
+.nav-button {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-button.active {
+    background-color: #D7BFA5;
+    color: black;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+
+ .image-container #getstarted{
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    filter: brightness(40%);
+    
+    box-shadow:  1px 1px 10px #4a3b2b;
+    }
+ 
+ img#login-overlay{
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    filter: brightness(30%);
+        
+    }
+
+  .centered-home{
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    bottom: 40vw;
+    color: #FFFAEE;
+    top: 35%;
+    font-size: 3vw;
+    }
+
+  .centered-home p{
+    font-size: 1vw;
+    text-align: center;
+    font-style: italic;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    padding: .5vw;
+    padding-bottom: 2vw;
+  }
+
+
+.centered-home h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    
+}
+
+.glow{
+    animation: glow 10s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 1px #fff, 0 0 10px #C0834C, 0 0 20px ;
+    }
+    
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 10px #FFFAEE, 0 0 30px #FFFAEE, 0 0 30px ;
+    }
+  }
+
+  .centered-button {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: relative;
+    justify-content: center;
+    top: 1vw;
+    color: #ffffff;
+    background-color: #ffb74a;
+    font-size: 2vw;
+    border-radius: 1vw;
+    text-decoration: none;
+    padding: 1vw;
+
+}
+    .centered-button:hover{
+    background-color: #ffffff;
+    color: #ffb74a;
+    box-shadow: 1px 1px 10px #ffffff;
+    transition: .2s;
+    }
+
+ #gsmenu{
+    position: relative;
+    width: 100%;
+    display: flex;
+    bottom: 10vw;
+    justify-content: center;
+    color: rgb(22, 22, 22);
+    filter: brightness(40%);
+}
+
+.centered-menu{
+    position: relative;
+    bottom: 25vw;
+    text-align: center;
+    color: #FFFAEE;
+    font-size: 3vw;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+.centered-menu p{
+    font-size: 1vw;
+    text-align: center;
+    font-style: italic;
+    padding: .5vw;
+
+}
+
+/* END NAV-HOME CSS */
+
+.products-container{
+    background-color: white;
+    
+}
+
+.item-menu-container{
+    display: flex;
+    justify-content: space-evenly;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+
+
+.menu-bar {
+    position: sticky;
+    display: flex;
+    width: 100%;
+    background: #FFFAEE;
+    box-shadow: 0px 5px 10px #D7BFA5;
+    justify-content: center;
+    gap: 5vw;
+    transition: .4s;
+
+}
+
+.menu-item {
+    color: #513726;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1vw;
+    padding: 1vw;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    color: #4a3b2b;
+    background-color: #D7BFA5;
+    padding: 1vw;
+}
+
+.item-editor{
+    width: 100%;
+    margin: 50px 50px 50px 0px;
+    color: #C0834C;
+    
+}
+    
+
+.editor-card{
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: .5vw;
+    background: white;
+    border-radius: 10px;
+    padding: 2vw;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    align-content: flex-end;
+}
+
+.add-item h1{
+    font-size: 1vw;
+    text-align: center;
+    padding: 1vw;
+}
+
+.menu-card{
+    display: flex;
+    width: 50vw;
+    background: white;
+    border-radius: 10px;
+    padding: 2vw;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 50px 50px 0px 50px;
+}
+
+
+
+#menu-img {
+    width: 10vw;
+    height: 10vw;
+}
+
+.add-button{
+}
+
+
+#menu-add-button{
+    width: 10px;
+    height: 10px;
+    
+    padding: 10px;
+}
+
+.menu-details{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: start;
+    font-size: 2vw;
+    font-weight: 700;
+    margin: 10px 10px;
+}
+
+.price {
+    font-size: 1.5vw;
+    font-weight: 400;
+}
+
+.description {
+    font-size: 1vw;
+    font-weight: 400;
+    color: #333;
+}
+
+.menu-container {
+    position: absolute;
+    height: 100%;
+    background: white;
+}
+
+.add-item {
+    width: 150px;
+    background: none;
+    border-radius: 5px;
+    border: none;
+    font-size: 24px;
+    font-family: Jost, sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    align-self: center;
+}
+
+.add-item:hover {
+    background: #d7bfa5;
+}
+
+
+
+
+
