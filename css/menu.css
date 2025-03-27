@@ -28,6 +28,10 @@ body {
 }
 
 
+#nav-menu{
+    display:contents;
+}
+
 #nav-menu.button-container {
     display: flex;
     gap: 5vw;

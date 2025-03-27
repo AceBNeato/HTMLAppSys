@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin Menu - Cuptain's Brew</title>
+    <link rel="stylesheet" href="../../css/menu.css">
+</head>
+<body>
+    <header class="header">
+        <img src="../../images/LOGO.png" id="logo" alt="cuptainsbrewlogo">
+        <nav class="button-container" id="nav-menu">
+            <a href="../../views/admin/admin-menu.html" class="nav-button">Menu</a>
+            <a href="../../views/admin/admin-orders.html" class="nav-button">Orders</a>
+            <a href="../../views/admin/admin-reports.html" class="nav-button">Reports</a>
+            <a href="../../views/admin/admin-accounts.html" class="nav-button">Accounts</a>
+            <a id="logout-button" class="nav-button">Logout</a>
+        </nav>
+    </header>
+
+    <div class="menu-bar">
+        <div class="menu-item" data-page="../../views/menu-items/coffee.html" onchange="">Coffee</div>
+        <div class="menu-item" data-page="../../views/menu-items/Non-coffee.html">Non-Coffee</div>
+        <div class="menu-item" data-page="../../views/menu-items/Frappe.html">Frappe</div>
+        <div class="menu-item" data-page="../../views/menu-items/Milktea.html">MilkTea</div>
+        <div class="menu-item" data-page="../../views/menu-items/Soda.html">Soda</div>
+        
+    </div>
+    
+
+    <div class="products-container">
+        <p>loading menu.....</p>
+    </div>
+
+ 
+    <script src="../../js/admin-menu.js"></script>
+    <script src="../../js/script.js"></script>
+    <script src="../../js/auth.js"></script>
+
+</body>
+</html>
