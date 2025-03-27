@@ -259,24 +259,42 @@ body {
     height: 10vw;
 }
 
-.add-button{
+
+.add-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin: 10px;
 }
 
-
-#menu-add-button{
-    width: 10px;
-    height: 10px;
-    
-    padding: 10px;
+.add-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px; 
+    height: 50px;
+    background-color: white; 
+    box-shadow: 0px 1px 5px #333;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
 }
+
+.add-button img {
+    width: 20px; 
+    height: 20px;
+}
+
 
 .menu-details{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: start;
     font-size: 2vw;
     font-weight: 700;
-    margin: 10px 10px;
+    margin: 10px;
 }
+
+
 
 .price {
     font-size: 1.5vw;
