@@ -166,6 +166,18 @@ body {
 
 }
 
+
+.hidden {
+    display: none;
+}
+
+
+
+
+
+
+
+
 /* END NAV-HOME CSS */
 
 .products-container{
@@ -175,7 +187,7 @@ body {
 
 .item-menu-container{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     background: white;
     border-radius: 10px;
     text-align: center;
@@ -212,28 +224,9 @@ body {
     padding: 1vw;
 }
 
-.item-editor{
-    width: 100%;
-    margin: 50px 50px 50px 0px;
-    color: #C0834C;
-    
-}
+
     
 
-.editor-card{
-    position: sticky;
-    top: 200px;
-    display: flex;
-    flex-direction: column;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: .5vw;
-    background: white;
-    border-radius: 10px;
-    padding: 2vw;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    justify-content: center;
-    align-content: flex-end;
-}
 
 .add-item h1{
     font-size: 1vw;
@@ -243,13 +236,13 @@ body {
 
 .menu-card{
     display: flex;
-    width: 50vw;
+    width: 55vw;
     background: white;
     border-radius: 10px;
     padding: 2vw;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    margin: 50px 50px 0px 50px;
+    margin: 50px 50px 0px 30px;
 }
 
 
@@ -330,6 +323,105 @@ body {
 }
 
 
+.menu-card.selected {
+    background-color: #D7BFA5;
+    transition: background-color 0.3s ease-in-out;
+}
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.item-editor {
+    position: sticky;
+    top: 200px;
+    width: 400px;
+    height: 450px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: start;
+    font-family: 'Jost', sans-serif;
+    margin: 50px 100px 30px 30px
+}
+
+.item-editor img {
+    margin: 0px;
+    width: 400px;
+    height: 100px; 
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    object-fit: cover; 
+    object-position: center;
+   
+}
+
+.item-editor h2 {
+    
+    font-size: 2vw;
+    font-weight: 700;
+    color: black;
+    word-wrap: break-word;
+    margin: 8px 0px 0px 10px;
+}
+
+.item-editor .price {
+    font-size: 1.5vw;
+    font-weight: 400;
+    color: black;
+    word-wrap: break-word;
+    margin: 8px 0px 0px 10px;
+}
+
+.item-editor .description {
+    
+    font-size: 1vw;
+    font-weight: 400;
+    color: black;
+    word-wrap: break-word;
+    margin: 8px 0px 0px 10px;
+}
+
+.item-editor button {
+    width: 40%;
+    padding: 8px;
+    margin: 4px;
+    border: none;
+    border-radius: 6px;
+    font-size: 24px;
+    font-weight: 500;
+    font-family: 'Jost', sans-serif;
+    word-wrap: break-word;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.item-editor button:first-of-type {
+    background: black;
+    color: white;
+}
+
+.item-editor button:last-of-type {
+    background: red;
+    color: white;
+}
+
+.item-editor button:hover {
+    opacity: 0.8;
+}

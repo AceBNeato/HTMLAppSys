@@ -167,6 +167,26 @@ body {
 }
 
 
+
+
+.user-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+
+
+.hidden {
+    display: none;
+}
+
+
 /* END NAV-HOME CSS */
 
 

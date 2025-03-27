@@ -26,3 +26,52 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelector(".menu-bar").scrollIntoView({ behavior: "smooth" });
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.body.addEventListener("click", function (event) {
+        if (event.target.classList.contains("add-button")) {
+            const menuCard = event.target.closest(".menu-card");
+            if (!menuCard) return;
+
+            // Remove highlight from any previously selected menu-card
+            document.querySelectorAll(".menu-card").forEach(card => {
+                card.classList.remove("selected");
+            });
+
+            // Add highlight to the clicked menu-card
+            menuCard.classList.add("selected");
+
+            const imgSrc = menuCard.querySelector("img")?.src || "";
+            const title = menuCard.querySelector("h2")?.innerText || "No Title";
+            const price = menuCard.querySelector(".price")?.innerText || "No Price";
+            const description = menuCard.querySelector(".description")?.innerText || "No Description";
+
+            const editorContainer = document.querySelector(".item-editor");
+            if (!editorContainer) return;
+
+            editorContainer.innerHTML = `
+                <img src="${imgSrc}" class="editor-img" alt="${title}">
+                <h2>${title}</h2>
+                <p class="price">${price}</p>
+                <p class="description">${description}</p>
+                <button class="remove-item">REMOVE</button>
+            `;
+
+            console.log("Item Updated:", title);
+        }
+    });
+
+    // Remove button event
+    document.body.addEventListener("click", function (event) {
+        if (event.target.classList.contains("remove-item")) {
+            document.querySelector(".item-editor").innerHTML = `<h3>Choose Item To Edit</h3> <p>Add Item</p>`;
+
+            // Remove selection highlight when item is removed
+            document.querySelectorAll(".menu-card").forEach(card => {
+                card.classList.remove("selected");
+            });
+
+            console.log("Editor Cleared");
+        }
+    });
+});
