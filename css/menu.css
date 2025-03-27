@@ -186,6 +186,7 @@ body {
 
 .menu-bar {
     position: sticky;
+    top: 100px;
     display: flex;
     width: 100%;
     background: #FFFAEE;
@@ -221,6 +222,7 @@ body {
 
 .editor-card{
     position: sticky;
+    top: 200px;
     display: flex;
     flex-direction: column;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
