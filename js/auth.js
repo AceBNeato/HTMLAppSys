@@ -15,30 +15,31 @@ document.addEventListener("keydown", function (event) {
 });
 
 
-
-
-
-
-
-
 document.addEventListener("DOMContentLoaded", function () {
-    const loginForm = document.getElementById("admin-login-form");
+    const adminLoginForm = document.getElementById("admin-login-form");
 
-    if (loginForm) {
-        loginForm.addEventListener("submit", function (event) {
+    if (adminLoginForm) {
+        adminLoginForm.addEventListener("submit", function (event) {
             event.preventDefault();
 
             const email = document.getElementById("email").value;
             const password = document.getElementById("password").value;
+            const loadingOverlay = document.getElementById("loading-overlay");
 
-            // Allow only users to log in
-            if (email === "admin@123" && password === "admin123") {
-                sessionStorage.setItem("userRole", "admin");
-                localStorage.setItem("userLoggedIn", "true");
-                window.location.href = "../../../views/admin/admin-menu.html";
-            } else {
-                alert("Invalid login credentials. Admin access is not allowed.");
-            }
+            // Show loading overlay
+            loadingOverlay.style.display = "flex";
+
+            // Simulate a delay for demonstration purposes
+            setTimeout(() => {
+                if (email === "admin@123" && password === "admin123") {
+                    sessionStorage.setItem("userRole", "admin");
+                    localStorage.setItem("userLoggedIn", "true");
+                    window.location.href = "../../../views/admin/admin-menu.html";
+                } else {
+                    alert("Invalid login credentials.");
+                    loadingOverlay.style.display = "none"; // Hide loading overlay on failed login
+                }
+            }, 2000); // Adjust the delay as needed
         });
     }
 });
@@ -46,30 +47,44 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-/*USER LOGIN FORM*/
+
 
 document.addEventListener("DOMContentLoaded", function () {
-    const loginForm = document.getElementById("user-login-form");
+    const userLoginForm = document.getElementById("user-login-form");
 
-    if (loginForm) {
-        loginForm.addEventListener("submit", function (event) {
+    if (userLoginForm) {
+        userLoginForm.addEventListener("submit", function (event) {
             event.preventDefault();
 
             const email = document.getElementById("email").value;
             const password = document.getElementById("password").value;
+            const loadingOverlay = document.getElementById("loading-overlay");
 
-            // Allow only users to log in
-            if (email === "user@123" && password === "user123") {
-                sessionStorage.setItem("userRole", "user");
-                localStorage.setItem("userLoggedIn", "true");
-                window.location.href = "/views/users/user-home.html";
-            } else {
-                alert("Invalid login credentials.");
-            }
+            // Show loading overlay
+            loadingOverlay.style.display = "flex";
+
+            // Simulate a delay for demonstration purposes
+            setTimeout(() => {
+                if (email === "user@123" && password === "user123") {
+                    sessionStorage.setItem("userRole", "user");
+                    localStorage.setItem("userLoggedIn", "true");
+                    window.location.href = "/views/users/user-home.html";
+                } else {
+                    alert("Invalid login credentials.");
+                    loadingOverlay.style.display = "none"; // Hide loading overlay on failed login
+                }
+            }, 2000); // Adjust the delay as needed
         });
     }
 });
 
+
+window.onload = function() {
+    const loadingOverlay = document.getElementById("loading-overlay");
+    if (loadingOverlay) {
+        loadingOverlay.style.display = "none";
+    }
+};
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -124,31 +139,90 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 /* ========================== Logout Function ========================== */
+function showLogoutOverlay() {
+   
+    const overlay = document.createElement("div");
+    overlay.id = "logout-overlay";
+    overlay.style.position = "fixed";
+    overlay.style.top = "0";
+    overlay.style.left = "0";
+    overlay.style.width = "100%";
+    overlay.style.height = "100%";
+    overlay.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+    overlay.style.display = "flex";
+    overlay.style.fontFamily = "Segoe UI";
+    overlay.style.justifyContent = "center";
+    overlay.style.alignItems = "center";
+    overlay.style.zIndex = "9999";
+
+  
+    const modal = document.createElement("div");
+    modal.style.backgroundColor = "#fff";
+    modal.style.padding = "20px";
+    modal.style.borderRadius = "8px";
+    modal.style.textAlign = "center";
+    modal.style.boxShadow = "0px 4px 6px rgba(0,0,0,0.1)";
+    modal.style.minWidth = "300px";
+
+
+    const message = document.createElement("p");
+    message.innerText = "Thanks for stopping by. See you soon!";
+    message.style.fontSize = "16px";
+    message.style.marginBottom = "20px";
+
+   
+    const buttonsContainer = document.createElement("div");
+    buttonsContainer.style.display = "flex";
+    buttonsContainer.style.justifyContent = "space-between";
+
+   
+    const cancelButton = document.createElement("button");
+    cancelButton.innerText = "Cancel";
+    cancelButton.style.padding = "10px 20px";
+    cancelButton.style.border = "none";
+    cancelButton.style.backgroundColor = "#6C4E31";
+    cancelButton.style.color = "white";
+    cancelButton.style.borderRadius = "5px";
+    cancelButton.style.cursor = "pointer";
+    cancelButton.onclick = function () {
+        document.body.removeChild(overlay);
+    };
+
+    const logoutButton = document.createElement("button");
+    logoutButton.innerText = "Logout";
+    logoutButton.style.padding = "10px 20px";
+    logoutButton.style.border = "none";
+    logoutButton.style.backgroundColor = "#6C4E31";
+    logoutButton.style.color = "white";
+    logoutButton.style.borderRadius = "5px";
+    logoutButton.style.cursor = "pointer";
+    logoutButton.onclick = logout;
+
+    buttonsContainer.appendChild(cancelButton);
+    buttonsContainer.appendChild(logoutButton);
+    modal.appendChild(message);
+    modal.appendChild(buttonsContainer);
+    overlay.appendChild(modal);
+    document.body.appendChild(overlay);
+}
+
 function logout() {
     const userRole = sessionStorage.getItem("userRole");
 
-    // Remove login data
     sessionStorage.removeItem("userRole");
     localStorage.removeItem("userLoggedIn");
 
-    // Redirect based on user role
     if (userRole === "admin") {
-        alert("Admin logged out successfully.");
-        window.location.href = "/views/home.html"; // Admin login page
+        window.location.href = "/views/home.html"; 
     } else {
-        alert("User logged out successfully.");
-        window.location.href = "/views/home.html"; // User login page
+        window.location.href = "/views/home.html"; 
     }
 }
 
-// Attach logout function to logout buttons (if present)
+// Attach logout function to logout button
 document.addEventListener("DOMContentLoaded", function () {
     const logoutButton = document.getElementById("logout-button");
     if (logoutButton) {
-        logoutButton.addEventListener("click", logout);
+        logoutButton.addEventListener("click", showLogoutOverlay);
     }
 });
-
-
-
-

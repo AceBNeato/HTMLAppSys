@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Admin Menu - Cuptain's Brew</title>
     <link rel="stylesheet" href="../../css/menu.css">
+    <link rel="stylesheet" href="../../css/orders.css">
 </head>
 <body>
     <header class="header">
@@ -20,11 +21,56 @@
     </header>
 
 
-    <div class="products-container">
-    </div>
+    <div class="orders-container">
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Order Number</th>
+                    <th>Name of Item</th>
+                    <th>Order Date</th>
+                    <th>Order Time</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="order1">
+                    <td>2</td>
+                    <td class="item-container">
+                        <img src="/images/item/coffee/latte 2.png" class="item-img" alt="Cafe Latte" >
+                        Cafe Latte
+                    </td>
+                    <td class="order-date">01/20/2025</td>
+                    <td class="order-time">12:50 PM</td>
+                    <td>
+                        <button class="accept-btn">Accept</button>
+                        <button class="decline-btn">Decline</button>
+                    </td>
+                </tr>
+                
+
+
+            </tbody>
+        </table>
+    
+        <!-- Modal (Hidden by Default) -->
+        <div id="orderModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal()">&times;</span>
+                <h2 id="modal-title"></h2>
+                <img id="modal-img" src="/images/item/coffee/latte 2.png" alt="Item Image" width="150">
+                <p id="modal-desc"></p>
+            </div>
+        </div>
+
+
 
     <script src="../../js/admin-menu.js"></script>
+    <script src="../../js/admin-orders.js"></script>
     <script src="../../js/script.js"></script>
     <script src="../../js/auth.js"></script>
+
+
+
 </body>
 </html>

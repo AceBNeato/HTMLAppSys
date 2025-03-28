@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Admin Menu - Cuptain's Brew</title>
-    <link rel="stylesheet" href="../../css/menu.css">
+    <link rel="stylesheet" href="../../css/admin-menu.css">
 </head>
 <body>
     <header class="header">
@@ -17,25 +17,33 @@
             <a href="../../views/admin/admin-accounts.html" class="nav-button">Accounts</a>
             <a id="logout-button" class="nav-button">Logout</a>
         </nav>
-    </header>
+             </header>
+                
+             <div class="menu-bar">
+                    <div class="menu-item" data-page="../../views/menu-items/coffee.html">Coffee</div>
+                    <div class="menu-item" data-page="../../views/menu-items/Non-coffee.html">Non-Coffee</div>
+                    <div class="menu-item" data-page="../../views/menu-items/Frappe.html">Frappe</div>
+                    <div class="menu-item" data-page="../../views/menu-items/Milktea.html">MilkTea</div>
+                    <div class="menu-item" data-page="../../views/menu-items/Soda.html">Soda</div>
+                    
+                   
+                </div>
 
-    <div class="menu-bar">
-        <div class="menu-item" data-page="../../views/menu-items/coffee.html" onchange="">Coffee</div>
-        <div class="menu-item" data-page="../../views/menu-items/Non-coffee.html">Non-Coffee</div>
-        <div class="menu-item" data-page="../../views/menu-items/Frappe.html">Frappe</div>
-        <div class="menu-item" data-page="../../views/menu-items/Milktea.html">MilkTea</div>
-        <div class="menu-item" data-page="../../views/menu-items/Soda.html">Soda</div>
         
-    </div>
     
-
-    <div class="products-container">
-        <p>loading menu.....</p>
+    <!-- Menu display -->
+    <div class="products-container" id="menu-list">
+        
+        <p>Loading menu...</p>
     </div>
 
- 
+
+
+
+
+
+
     <script src="../../js/admin-menu.js"></script>
-    <script src="../../js/script.js"></script>
     <script src="../../js/auth.js"></script>
 
 </body>

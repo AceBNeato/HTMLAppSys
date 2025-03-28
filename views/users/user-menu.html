@@ -6,59 +6,54 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cuptain's Brew</title>
     <link rel="stylesheet" href="../../css/menu.css">
-    
-
 </head>
 <body>
+
+    <!-- Header Section -->
     <header class="header">
-    <img src="../../images/LOGO.png" id="logo" alt="cuptainsbrewlogo">
+        <img src="../../images/LOGO.png" id="logo" alt="Cuptain's Brew Logo">
 
-    <!-- "nav-menu" is for mobiles
-    <button id="menu-toggle" class="menu-toggle"> ☰  </button> -->
+        <!-- Navigation Menu -->
+        <nav class="button-container" id="nav-menu">
+            <a href="/views/users/user-home.html" class="nav-button">Home</a>
+            <a href="/views/users/user-menu.html" class="nav-button">Menu</a>
+            <a href="/views/users/user-career.html" class="nav-button">Career</a>
+            <a href="/views/users/user-aboutus.html" class="nav-button">About Us</a>
 
-    <nav class="button-container" id="nav-menu">
-        
-        <a href="/views/users/user-home.html" class="nav-button" > Home</a>
-        <a href="/views/users/user-menu.html" class="nav-button"> Menu</a>
-        <a href="/views/users/user-career.html" class="nav-button" > Career</a>
-        <a href="/views/users/user-aboutus.html" class="nav-button" > About Us</a>
+            <!-- Icons -->
+            <div class="icon-container">
+                <a href="/views/users/cart.html" id="cart-icon" class="nav-icon hidden">
+                    <img src="../../images/cart-icon.png" alt="Cart">
+                </a>
+                <a href="/views/users/profile.html" id="profile-icon" class="nav-icon hidden">
+                    <img src="../../images/profile-icon.png" alt="Profile">
+                </a>
+            </div>
+        </nav>
+    </header>
 
+    <!-- Menu Bar -->
+    <div class="menu-bar">
+        <div class="menu-item" data-page="../../views/menu-items/coffee.html">Coffee</div>
+        <div class="menu-item" data-page="../../views/menu-items/Non-Coffee.html">Non-Coffee</div>
+        <div class="menu-item" data-page="../../views/menu-items/Frappe.html">Frappe</div>
+        <div class="menu-item" data-page="../../views/menu-items/MilkTea.html">Milk Tea</div>
+        <div class="menu-item" data-page="../../views/menu-items/Soda.html">Soda</div>
 
-        <div class="icon-container">
-            <a href="/views/users/cart.html" id="cart-icon" class="nav-icon hidden">
-                <img src="../../images/cart-icon.png" alt="Cart">
-            </a>
-            <a href="/views/users/profile.html" id="profile-icon" class="nav-icon hidden">
-                <img src="../../images/profile-icon.png" alt="Profile" >
-            </a>
+        <div class="search-container">
+            <input type="search" id="search" name="query" placeholder="Search...">
+            <button type="submit">Search</button>
         </div>
-        
-    </nav>
 
 
-    
-</header>
+    </div>
 
-<div class="menu-bar">
-    <div class="menu-item" data-page="../../views/menu-items/coffee.html" onchange="">Coffee</div>
-    <div class="menu-item" data-page="../../views/menu-items/Non-Coffee.html">Non-Coffee</div>
-    <div class="menu-item" data-page="../../views/menu-items/Frappe.html">Frappe</div>
-    <div class="menu-item" data-page="../../views/menu-items/MilkTea.html">MilkTea</div>
-    <div class="menu-item" data-page="../../views/menu-items/Soda.html">Soda</div>
-    
-</div>
-    
-<div class="products-container">
+    <!-- Products Container -->
+    <div class="products-container"></div>
 
-</div>
-</div>
-
-<!--SCRIPTS-->
-
-<script src="../../js/auth.js"></script>
-
-<script src="../../js/script.js"></script>
-
-
+    <!-- Scripts -->
+    <script src="../../js/auth.js"></script>
+    <script src="../../js/script.js"></script>
+    <script src="../../js/user-menu.js"></script>
 </body>
 </html>
