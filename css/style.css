@@ -14,6 +14,7 @@ body {
     overflow: hidden;
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
     padding: 10px;
     background-color: #FFFAEE;
     box-shadow: 0px 1px 10px #D7BFA5;
@@ -23,15 +24,12 @@ body {
 
 #logo {
     width: 15vw;
-    margin-right: 5vw;
-    margin-left: 5vw;
 }
 
 
 #nav-menu.button-container {
     display: flex;
-    gap: 5vw;
-    margin-left: 3vw;
+    gap: 4vw;
     flex-direction: row;
     align-items: center;
     transition: .4s;
@@ -40,8 +38,9 @@ body {
 
 .nav-button {
     font-family:Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 15px;
     color: black;
+    width: 5vw;
     text-decoration: none;
     padding: 10px 20px;
     transition: background-color 0.3s, color 0.3s;
@@ -167,8 +166,6 @@ body {
 }
 
 
-
-
 .user-icons {
     display: flex;
     align-items: center;
@@ -181,6 +178,18 @@ body {
 }
 
 
+.icon-container{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+
+.nav-icon img{
+    margin: 0px 20px 0px 20px;
+    width: 2vw;
+}
+
 
 .hidden {
     display: none;
@@ -188,6 +197,8 @@ body {
 
 
 /* END NAV-HOME CSS */
+
+* END NAV-HOME CSS */
 
 
 
@@ -395,6 +406,7 @@ body {
         text-align: center;
         padding: 12px;
         border-radius: 1vw;
+        transition: .3s;
     }
 
     .centered-home{
@@ -435,6 +447,10 @@ body {
         width: 100vw;
     }
 
+
+    #nav-menu.button-container{
+        display: none;
+    }
 
     .nav-button {
         font-size: 3vw;

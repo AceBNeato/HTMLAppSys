@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (email === "user@123" && password === "user123") {
                 sessionStorage.setItem("userRole", "user");
                 localStorage.setItem("userLoggedIn", "true");
-                window.location.href = "/views/home.html";
+                window.location.href = "/views/users/user-home.html";
             } else {
                 alert("Invalid login credentials.");
             }
@@ -84,13 +84,33 @@ document.addEventListener("DOMContentLoaded", function () {
     if (userLoggedIn === "true" && userRole === "user") {
         // Change "Get Started" button to "View Our Menu"
         getStartedBtn.innerText = "View Our Menu";
-        getStartedBtn.href = "../views/menu.html";
+        getStartedBtn.href = "/views/users/user-menu.html";
 
         // Show Cart and Profile icons
         cartIcon.classList.remove("hidden");
         profileIcon.classList.remove("hidden");
     }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const getStartedBtn = document.getElementById("view-menu-button");
+    const cartIcon = document.getElementById("cart-icon");
+    const profileIcon = document.getElementById("profile-icon");
+
+    // Check if elements exist (to avoid errors on other pages)
+    if (cartIcon && profileIcon) {
+        // Check if the user is logged in
+        const userLoggedIn = localStorage.getItem("userLoggedIn");
+        const userRole = sessionStorage.getItem("userRole");
+
+        if (userLoggedIn === "true" && userRole === "user") {
+            // Show Cart and Profile icons
+            cartIcon.classList.remove("hidden");
+            profileIcon.classList.remove("hidden");
+        }
+    }
+});
+
 
 
 
