@@ -194,7 +194,7 @@ img#login-overlay {
 /* Item Menu */
 .item-menu-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     background: white;
     border-radius: 10px;
     text-align: center;
@@ -206,7 +206,6 @@ img#login-overlay {
     position: sticky;
     display: flex;
     top: 100px;
-    width: 100%;
     background: #FFFAEE;
     box-shadow: 0px 5px 10px #D7BFA5;
     justify-content: flex-start;
@@ -247,20 +246,31 @@ img#login-overlay {
 }
 
 
+/*MENU CART*/
 
 
+.menu-cart{
+    display: flex;
+    top: 200px;
+    position: sticky;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 0px;
+    justify-content: center;
+    position:sticky;
+    height: 450px;
+}
 
-
-
-
-
-
+.menu-cart-container{
+    display: flex;
+    margin: 0px;
+    padding: 3vw 5vw 5vw 5vw;
+}
 
 /* Menu Cards */
 .menu-card {
     display: flex;
     width: 55vw;
-    justify-content: space-between;
+    justify-content: space-evenly;
     background: white;
     border-radius: 10px;
     padding: 2vw;
@@ -346,5 +356,3 @@ img#login-overlay {
     object-fit: cover;
     object-position: center;
 }
-
-

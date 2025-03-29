@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Form</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 50%;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2, h3 {
+    color: #333;
+}
+
+.map {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.address-form input, 
+.personal-details input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.label-btn, .tip-btn, .place-order {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.label-btn {
+    background: #ddd;
+}
+
+.tip-btn {
+    background: #f0f0f0;
+}
+
+.place-order {
+    width: 100%;
+    background: #5a3d2b;
+    color: white;
+    font-size: 16px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="delivery-address">
+            <h2>Delivery Address</h2>
+            <img src="map-placeholder.png" alt="Map Location" class="map">
+            <p><strong>Location:</strong> Upper Tagum, Apokon</p>
+            <div class="address-form">
+                <label for="recipient">Recipient/Phone Number</label>
+                <input type="text" id="recipient" placeholder="Ajacks">
+                <label for="floor">Floor</label>
+                <input type="text" id="floor" placeholder="2">
+                <label for="street">Street</label>
+                <input type="text" id="street" placeholder="PICE 4-8 CHHN">
+                <label for="note">Note</label>
+                <input type="text" id="note" placeholder="N/A">
+            </div>
+        </section>
+        <section class="label-section">
+            <h3>Add a Label</h3>
+            <button class="label-btn">HOME</button>
+            <button class="label-btn">WORK</button>
+            <button class="label-btn">OTHERS</button>
+        </section>
+        <section class="delivery-options">
+            <h3>Delivery Options</h3>
+            <label><input type="radio" name="delivery" checked> Standard (15-25 mins)</label>
+            <label><input type="radio" name="delivery"> Priority (12-25 mins)</label>
+            <label><input type="radio" name="delivery"> Scheduled (15-45 mins)</label>
+        </section>
+        <section class="personal-details">
+            <h3>Personal Details</h3>
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="jblades03@gmail.com">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="JBL Adams">
+            <label for="mobile">Mobile Number</label>
+            <input type="text" id="mobile" placeholder="09070787975">
+        </section>
+        <section class="tip-section">
+            <h3>Tip your Rider</h3>
+            <button class="tip-btn">No Tip</button>
+            <button class="tip-btn">P10</button>
+            <button class="tip-btn">P20</button>
+            <button class="tip-btn">P50</button>
+        </section>
+        <button class="place-order">Place Order</button>
+    </div>
+</body>
+</html>
