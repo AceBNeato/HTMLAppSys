@@ -252,7 +252,7 @@ img#login-overlay {
 .menu-cart{
     border-radius: 10px;
     display: grid;
-    top: 200px;
+    top: 190px;
     position: sticky;
     box-shadow: 1px 1px 10px #4a3b2b;
     margin: 0px;
@@ -262,6 +262,7 @@ img#login-overlay {
     flex-direction: row;
     height: 490px;
     grid-template-rows: 100px 100px 100px 100px;
+   
 }
 
 .menu-cart-container{
@@ -308,7 +309,7 @@ img#login-overlay {
     padding: 2vw;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    margin: 50px 50px 0px 30px;
+    margin: 40px 50px 0px 0px;
 }
 
 .menu-card.selected {
