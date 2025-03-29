@@ -35,9 +35,12 @@
             </thead>
             <tbody>
                 <tr id="order1">
-                    <td>2</td>
+                    <td class="order-id">2</td>
                     <td class="item-container">
-                        <img src="/images/item/coffee/latte 2.png" class="item-img" alt="Cafe Latte" >
+                        <img src="/images/item/coffee/latte 2.png" class="item-img"
+                            alt="Latte" 
+                            width="150" 
+                            onclick="openModal('Latte', 'A delicious creamy latte', '/images/item/coffee/latte 2.png')">
                         Cafe Latte
                     </td>
                     <td class="order-date">01/20/2025</td>
@@ -47,10 +50,13 @@
                         <button class="decline-btn">Decline</button>
                     </td>
                 </tr>
-                
-
-
             </tbody>
+
+            
+
+
+
+
         </table>
     
         <!-- Modal (Hidden by Default) -->
@@ -62,7 +68,6 @@
                 <p id="modal-desc"></p>
             </div>
         </div>
-
 
 
     <script src="../../js/admin-menu.js"></script>

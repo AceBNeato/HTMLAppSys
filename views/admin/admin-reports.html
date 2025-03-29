@@ -25,19 +25,20 @@
         <!-- Sidebar Navigation -->
         <nav class="sidebar">
             <ul>
-                <li><a href="#" onclick="showOrders('all')">All Orders</a></li>
-                <li><a href="#" onclick="showOrders('pending')">Pending Orders</a></li>
-                <li><a href="#" onclick="showOrders('delivered')">Delivered Orders</a></li>
+                <li><a href="#" onclick="showOrders('all')" class="menu-bar" >All Orders</a></li>
+                <li><a href="#" onclick="showOrders('pending')" class="menu-bar" >Pending Orders</a></li>
+                <li><a href="#" onclick="showOrders('delivered')" class="menu-bar" >Delivered Orders</a></li>
             </ul>
         </nav>
 
         <!-- Main Content -->
         <main class="content">
+            <div class="item-container">
 
             <table>
                 <thead>
                     <tr>
-                        <th>Image</th>
+                        <th>Order Number</th>
                         <th>Item Name</th>
                         <th>Order Date</th>
                         <th>Order Time</th>
@@ -48,6 +49,8 @@
                     <!-- Orders will be inserted here dynamically -->
                 </tbody>
             </table>
+            </div>
+            
         </main>
     </div>
     
