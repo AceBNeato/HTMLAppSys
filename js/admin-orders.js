@@ -1,6 +1,4 @@
 //UPDATE ORDER ACCEPT:DECLINE
-
-
 document.addEventListener("DOMContentLoaded", function () {
     document.body.addEventListener("click", function (event) {
         if (event.target.classList.contains("accept-btn") || event.target.classList.contains("decline-btn")) {
@@ -26,7 +24,7 @@ function updateOrder(orderId, isAccepted) {
     let orderTime = row.querySelector(".order-time").innerText;
     let buttons = row.querySelectorAll("button");
 
-    let status = isAccepted ? "Delivered" : "Declined"; // Accepted → Delivered, Declined → Declined
+    let status = isAccepted ? "Pending" : "Declined"; // Accepted → Delivered, Declined → Declined
 
     row.classList.add(isAccepted ? "accepted" : "declined");
 
@@ -66,11 +64,37 @@ function updateOrder(orderId, isAccepted) {
 
 
 
-//REPORTS
+//REPORTS JAVASCRIPT
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const menubar = document.querySelectorAll(".menu-bar");
+
+    menubar.forEach(item => {
+        item.addEventListener("click", function () {
+            // Remove "active" class from all items
+            menubar.forEach(el => el.classList.remove("active"));
+            
+            // Add "active" class to clicked item
+            this.classList.add("active");
+        });
+    });
+});
+
+
+
+
+
+
+
+
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
     loadOrders("all"); // Load all orders initially
 });
+
 function loadOrders(filter) {
     let orders = JSON.parse(localStorage.getItem("orders")) || [];
     let reportsTable = document.getElementById("reports-table");
@@ -87,7 +111,7 @@ function loadOrders(filter) {
             let row = document.createElement("tr");
             row.innerHTML = `
                 <td>${order.id}</td>
-                <td><img src="${order.img}" width="40"> ${order.name}</td>
+                <td class="item-container"><img src="${order.img}" class="item-img" width="40"> ${order.name}</td>
                 <td>${order.date}</td>
                 <td>${order.time}</td>
                 <td class="order-status ${order.status.toLowerCase()}">${order.status}</td>
@@ -120,21 +144,30 @@ function addNewOrder(orderId, orderName, orderImg, orderDate, orderTime) {
 }
 
 
+
+
+//ORDERS=======
+
 function openModal(title, desc, imgSrc) {
     console.log("Opening modal with image:", imgSrc); // Debugging step
 
     document.getElementById("modal-title").innerText = title;
     document.getElementById("modal-desc").innerText = desc;
 
-    // Check if image path is valid
+    // Get the image element
     let imgElement = document.getElementById("modal-img");
+
+    // Update the image source
     imgElement.src = imgSrc;
+
+    // Handle image loading error
     imgElement.onerror = function () {
         console.error("Image failed to load:", imgSrc);
         imgElement.src = "/images/default-placeholder.png"; // Fallback image
     };
 
-    document.getElementById("orderModal").style.display = "block";
+    // Display the modal
+    document.getElementById("orderModal").style.display = "flex";
 }
 
 function closeModal() {

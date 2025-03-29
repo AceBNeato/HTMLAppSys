@@ -32,11 +32,21 @@ document.addEventListener("DOMContentLoaded", function () {
             // Simulate a delay for demonstration purposes
             setTimeout(() => {
                 if (email === "admin@123" && password === "admin123") {
+                   
                     sessionStorage.setItem("userRole", "admin");
                     localStorage.setItem("userLoggedIn", "true");
+
+                    
                     window.location.href = "../../../views/admin/admin-menu.html";
                 } else {
-                    alert("Invalid login credentials.");
+                   
+                        Swal.fire({
+                            icon: "error",
+                            title: "Oops...",
+                            text: "Invalid email or password! Please Try Again!",
+                            footer: '<a href="#">Why do I have this issue?</a>'
+                        }); 
+
                     loadingOverlay.style.display = "none"; // Hide loading overlay on failed login
                 }
             }, 2000); // Adjust the delay as needed
@@ -112,19 +122,21 @@ document.addEventListener("DOMContentLoaded", function () {
     const cartIcon = document.getElementById("cart-icon");
     const profileIcon = document.getElementById("profile-icon");
 
-    // Check if elements exist (to avoid errors on other pages)
+ 
     if (cartIcon && profileIcon) {
-        // Check if the user is logged in
+        
         const userLoggedIn = localStorage.getItem("userLoggedIn");
         const userRole = sessionStorage.getItem("userRole");
 
         if (userLoggedIn === "true" && userRole === "user") {
-            // Show Cart and Profile icons
+            
             cartIcon.classList.remove("hidden");
             profileIcon.classList.remove("hidden");
         }
     }
 });
+
+
 
 
 
