@@ -250,21 +250,53 @@ img#login-overlay {
 
 
 .menu-cart{
-    display: flex;
+    border-radius: 10px;
+    display: grid;
     top: 200px;
     position: sticky;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 10px #4a3b2b;
     margin: 0px;
-    justify-content: center;
+    width: 400px;
+    justify-items: center;
     position:sticky;
-    height: 450px;
+    flex-direction: row;
+    height: 490px;
+    grid-template-rows: 100px 100px 100px 100px;
 }
 
 .menu-cart-container{
     display: flex;
     margin: 0px;
-    padding: 3vw 5vw 5vw 5vw;
 }
+
+.cart-title{
+    height: 10px;
+    margin-top: 10px;
+    width: 95%;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cart-review{
+    padding-top: 30px;
+    height: 10px;
+    grid-row: 5 / -1;
+    margin-top: 10px;
+    width: 95%;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cart-title p, .cart-review p{
+    font-size: 20px;
+    padding: .5vw;
+    background-color: #4a3b2b;
+    border-radius: 5px;
+    text-align: center;
+
+}
+
+
 
 /* Menu Cards */
 .menu-card {
