@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Admin Menu - Cuptain's Brew</title>
     <link rel="stylesheet" href="../../css/menu.css">
+    <link rel="stylesheet" href="../../css/accounts.css">
 </head>
 <body>
     <header class="header">
@@ -19,12 +20,26 @@
         </nav>
     </header>
 
-   
-
-    <div class="products-container">
+    <div class="admin-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Number</th>
+                    <th>Role</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="user-table">
+                <!-- Users will be dynamically added here -->
+            </tbody>
+        </table>
     </div>
 
-    <script src="../js/auth.js"></script>
-    <script src="../js/admin-menu.js"></script>  <!-- New script for loading menu items -->
+
+    <script src="../../js/auth.js"></script>
+    <script src="../../js/admin-menu.js"></script>  <!-- New script for loading menu items -->
 </body>
 </html>
