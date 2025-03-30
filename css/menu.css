@@ -9,10 +9,11 @@ body {
     padding: 0;
 }
 
-/* Header */
+
 .header {
     position: sticky;
     top: 0;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -20,6 +21,7 @@ body {
     background-color: #FFFAEE;
     box-shadow: 0px 1px 10px #D7BFA5;
     z-index: 10;
+
 }
 
 #logo {
@@ -41,16 +43,16 @@ body {
     color: black;
     width: 5vw;
     text-decoration: none;
-    padding: 10px 20px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
 }
 
-.nav-button.active {
-    background-color: #D7BFA5;
-    color: black;
-    font-weight: bold;
-    border-radius: 8px;
+.nav-button.active, .nav-button:hover {
+    background-color: #4a3b2b;
+    color: white;
 }
 
 /* Image Containers */
@@ -220,6 +222,7 @@ img#login-overlay {
     padding: 1vw 2vw 1vw 2vw;
     font-weight: 400;
     cursor: pointer;
+    transition: .5s;
 }
 
 .menu-item:hover {
