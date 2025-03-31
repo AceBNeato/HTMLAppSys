@@ -33,7 +33,7 @@ h2, h3 {
 
 .address-form input, 
 .personal-details input {
-    width: 100%;
+    width: 95%;
     padding: 10px;
     margin: 5px 0 10px;
     border: 1px solid #ccc;
@@ -66,23 +66,64 @@ h2, h3 {
 button:hover {
     opacity: 0.8;
 }
+
+.label-btn{
+    background-color: white;
+    border:1px solid #5a3d2b;
+}
+
+.tip-btn{
+    background-color: white;
+    border:1px solid #5a3d2b;
+}
+
+.location {
+            display: flex;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+        .location i {
+            color: red;
+            font-size: 20px;
+            margin-right: 5px;
+        }
+        .text {
+            display: flex;
+            flex-direction: column;
+        }
+        .text .title {
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .text .subtitle {
+            font-size: 14px;
+            color: #333;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <section class="delivery-address">
             <h2>Delivery Address</h2>
-            <img src="map-placeholder.png" alt="Map Location" class="map">
-            <p><strong>Location:</strong> Upper Tagum, Apokon</p>
+            <img src="../../images/deliver 1.png" alt="Map Location" class="map">
+            <div class="location">
+                <i class="fa-solid fa-location-dot"></i>
+                <div class="text"> 
+                    <span class="title">Usep Tagum</span>
+                    <span class="subtitle">Apokon</span>
+                </div>
+            </div>
+            <hr>
+            <h3>Complete Address</h3>
             <div class="address-form">
                 <label for="recipient">Recipient/Phone Number</label>
-                <input type="text" id="recipient" placeholder="Ajacks">
+                <input type="text" id="recipient" required>
                 <label for="floor">Floor</label>
-                <input type="text" id="floor" placeholder="2">
+                <input type="text" id="floor" required>
                 <label for="street">Street</label>
-                <input type="text" id="street" placeholder="PICE 4-8 CHHN">
+                <input type="text" id="street" required>
                 <label for="note">Note</label>
-                <input type="text" id="note" placeholder="N/A">
+                <input type="text" id="note" required >
             </div>
         </section>
         <section class="label-section">
@@ -100,11 +141,11 @@ button:hover {
         <section class="personal-details">
             <h3>Personal Details</h3>
             <label for="email">Email</label>
-            <input type="email" id="email" placeholder="jblades03@gmail.com">
+            <input type="email" id="email" required>
             <label for="name">Name</label>
-            <input type="text" id="name" placeholder="JBL Adams">
+            <input type="text" id="name" required>
             <label for="mobile">Mobile Number</label>
-            <input type="text" id="mobile" placeholder="09070787975">
+            <input type="text" id="mobile" required>
         </section>
         <section class="tip-section">
             <h3>Tip your Rider</h3>
