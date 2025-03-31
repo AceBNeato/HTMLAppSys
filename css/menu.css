@@ -202,6 +202,25 @@ img#login-overlay {
     text-align: center;
     padding-bottom: 2vw;
 }
+.img{
+    border-radius: 5px;
+    display: flex;
+    margin-left: 10px;
+    margin-top:-40px ;
+    height: 50px;
+    width: 50px;
+    padding-bottom: 5px;
+}
+
+.name{
+    display: flex;
+    margin-left: 70px;
+    margin-top: -55px;
+}
+
+.hot{
+    margin-left: -10vw;
+}
 
 /* Menu Bar */
 .menu-bar {
@@ -260,7 +279,6 @@ img#login-overlay {
     box-shadow: 1px 1px 10px #4a3b2b;
     margin: 0px;
     width: 400px;
-    justify-items: center;
     position:sticky;
     flex-direction: row;
     height: 490px;
@@ -275,6 +293,7 @@ img#login-overlay {
 
 .cart-title{
     height: 10px;
+    padding-left: 10px;
     margin-top: 10px;
     width: 95%;
     color: white;
@@ -284,6 +303,7 @@ img#login-overlay {
 .cart-review{
     padding-top: 30px;
     height: 10px;
+    padding-left: 10px;
     grid-row: 5 / -1;
     margin-top: 10px;
     width: 95%;
@@ -291,13 +311,17 @@ img#login-overlay {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.cart-title p, .cart-review p{
+.cart-title p, .cart-review button{
     font-size: 20px;
     padding: .5vw;
     background-color: #4a3b2b;
     border-radius: 5px;
     text-align: center;
+    color: white;
+}
 
+.cart-review button{
+    width: 100%;
 }
 
 
@@ -391,4 +415,34 @@ img#login-overlay {
     height: 100px;
     object-fit: cover;
     object-position: center;
+}
+
+
+.profile > img{
+    width: 2vw;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 30px;
+    margin: 40px 0px 0px 0px;
+    background: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px 0;
+    width: 150px;
+}
+.dropdown a {
+    position: relative;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+.dropdown a:hover {
+    background: #f0f0f0;
+}
+.profile:hover .dropdown {
+    display: block;
 }

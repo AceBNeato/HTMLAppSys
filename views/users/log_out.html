@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Menu</title>
+    <style>
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 30px;
+            left: 0;
+            background: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            padding: 10px 0;
+            width: 150px;
+        }
+        .dropdown a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: black;
+        }
+        .dropdown a:hover {
+            background: #f0f0f0;
+        }
+        .profile:hover .dropdown {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile">
+        <img src="profile-pic.jpg" alt="Profile">
+        <span>bfelladobas_06</span>
+        <div class="dropdown">
+            <a href="#">My Account</a>
+            <a href="#">My Purchase</a>
+            <a href="#">Logout</a>
+        </div>
+    </div>
+</body>
+</html>

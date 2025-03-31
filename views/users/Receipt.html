@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .modal {
+            background: white;
+            width: 100%;
+            padding: 500px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .modal h2 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            border: none;
+            background: none;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .details {
+            align-items: center;
+            font-size: 14px;
+            color: #333;
+            border:1px solid #5a3d2b;
+            border-radius: 10px;
+            padding: 30px;
+        }
+
+        .details #extra{
+            padding-left: 20px;
+        }
+
+        .total {
+            font-weight: bold;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="modal">
+        <button class="close-btn">&times;</button>
+        <div class="details">
+            <h2><b>Tip your Rider</b></h2>
+            <p>Cuptain’s Brew, 5Th Avenue, Tagum City</p>
+            <hr>
+            <p>1 x Matcha Latte Iced</p>
+            <p id="extra"> + Extra Shot</p>
+            <hr>
+            <p>Subtotal: ₱ 100</p>
+            <p>Delivery Fee: Free</p>
+            <p class="total">Total: ₱ 100</p>
+        </div>
+    </div>
+</body>
+</html>
