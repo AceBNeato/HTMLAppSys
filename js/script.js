@@ -1,3 +1,26 @@
+
+document.addEventListener("DOMContentLoaded", function () {
+    const navbutton = document.querySelectorAll(".nav-button");
+
+    navbutton.forEach(item => {
+        item.addEventListener("click", function () {
+            // Remove "active" class from all items
+            navbutton.forEach(el => el.classList.remove("active"));
+            
+            // Add "active" class to clicked item
+            this.classList.add("active");
+        });
+    });
+});
+
+
+
+
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
     const menuItems = document.querySelectorAll(".menu-item");
     const productsContainer = document.querySelector(".products-container");
@@ -73,5 +96,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
             console.log("Editor Cleared");
         }
+    });
+});
+
+
+
+// CAROUSEL SCRIPT
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const track = document.querySelector(".carousel-track");
+    const items = document.querySelectorAll(".carousel-item");
+    
+    // Duplicate slides for infinite scrolling effect
+    items.forEach(item => {
+        let clone = item.cloneNode(true);
+        track.appendChild(clone);
     });
 });
