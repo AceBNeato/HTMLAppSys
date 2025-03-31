@@ -1,4 +1,5 @@
 /* Global Styles */
+/* Global Styles */
 * {
     margin: 0;
 }
@@ -9,11 +10,10 @@ body {
     padding: 0;
 }
 
-
+/* Header */
 .header {
     position: sticky;
     top: 0;
-    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -21,11 +21,40 @@ body {
     background-color: #FFFAEE;
     box-shadow: 0px 1px 10px #D7BFA5;
     z-index: 10;
-
 }
 
 #logo {
     width: 15vw;
+}
+
+/* Navigation */
+#nav-menu.button-container {
+    display: flex;
+    gap: 4vw;
+    flex-direction: row;
+    align-items: center;
+    transition: 0.4s;
+}
+
+
+.menu-item {
+    color: #513726;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1vw;
+    padding: 1vw 2vw 1vw 2vw;
+    font-weight: 400;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.menu-item:hover {
+    color: #4a3b2b;
+    background-color: #D7BFA5;
+}
+
+.menu-item.active {
+    background-color: #D7BFA5;
+    color: #4a3b2b; 
 }
 
 /* Navigation */
@@ -44,7 +73,7 @@ body {
     width: 5vw;
     text-decoration: none;
     text-align: center;
-    padding: 10px;
+    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
@@ -58,6 +87,7 @@ body {
 /* Image Containers */
 .image-container #getstarted,
 img#login-overlay {
+
     position: relative;
     width: 100%;
     justify-content: center;
@@ -113,6 +143,7 @@ img#login-overlay {
         text-shadow: 0 0 20px #fff, 0 0 10px #FFFAEE, 0 0 30px #FFFAEE, 0 0 30px;
     }
 }
+
 
 /* Centered Button */
 .centered-button {
