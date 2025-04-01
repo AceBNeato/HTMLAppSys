@@ -502,7 +502,12 @@ img#login-overlay {
 }
 
 
-.profile > img{
+
+.profile{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.profile > img{ 
     width: 2vw;
 }
 
