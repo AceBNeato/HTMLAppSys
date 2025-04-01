@@ -347,3 +347,17 @@ document.addEventListener("DOMContentLoaded", function() {
     displayUsers();
 });
 
+
+
+
+
+
+
+
+
+// CAREERS
+
+document.getElementById('jobForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Form submitted successfully!');
+});
