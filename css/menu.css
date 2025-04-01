@@ -280,20 +280,30 @@ img#login-overlay {
     border-radius: 5px;
     display: flex;
     margin-left: 10px;
-    margin-top:-40px ;
-    height: 50px;
-    width: 50px;
+    margin-top:-35px ;
+    height: 70px;
+    width: 70px;
     padding-bottom: 5px;
 }
 
 .name{
+    font-family: 'Jost', sans-serif;
     display: flex;
-    margin-left: 70px;
-    margin-top: -55px;
+    margin-left: 90px;
+    margin-top: -75px;
 }
 
 .hot{
-    margin-left: -10vw;
+    font-family: 'Jost', sans-serif;
+    margin-left: -128px;
+    font-size: smaller;
+}
+
+.p1{
+    font-family: 'Jost', sans-serif;
+    margin-left: -185px;
+    margin-top: 20px;
+    font-size: smaller;
 }
 
 /* Menu Bar */
@@ -521,14 +531,105 @@ img#login-overlay {
     display: block;
 }
 
+
+.cart{
+    width: 80%;
+    margin-left: 140px;
+}
+
+.cart-menu-card {
+    display: flex;
+    width: 71vw;
+    background: white;
+    border-radius: 10px;
+    padding: 2vw;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 50px 50px 0px 30px;
+}
+ .cart-menu-details{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2vw;
+    font-weight: 700;
+    margin-left: 20px;
+ }
+
+ .cart-menu-details h2{
+    font-size: 20px;
+ }
+
+ .cart-price, h3{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    margin-top: 60px;
+    margin-left: 60px;
+    font-weight: bold;
+
+ }
+
+ .cart-final-price, h3{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    margin-top: 60px;
+    margin-left: 150px;
+    font-weight: bold;
+ }
+
+ .cart-header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    padding: 10px;
+    background-color: #FFFAEE;
+    box-shadow: 0px 1px 10px #D7BFA5;
+    z-index: 10;
+}
+
+.Back{
+    margin-top: 35px;
+    margin-left: 40px;
+}
+
+#cart-logo{
+    margin-left: 70px;
+}
+
+.minus{
+    margin-left: 150px;
+    height: 20px;
+    margin-top: 60px;
+    width: 30px;
+    border: 1px solid black;
+}
+
+.quantity{
+    height: 20px;
+    margin-top: 60px;
+    width: 30px;
+    border: 1px solid black;
+}
+
+.plus{
+    height: 20px;
+    margin-top: 60px;
+    width: 30px;
+    border: 1px solid black;
+}
+
+ h3{
+    margin-left: 150px;
+ }
+
+ .arrow{
+    margin-top: 30px;
+    margin-left: 50px;
+    height: 30px;
+    width: 30px;
+ }
+
+=======
 /* PURCHASE REVIEW */
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #222;
-    text-align: center;
-    margin: 0;
-}
 
 /* Overlay Background */
 .overlay {
@@ -666,3 +767,4 @@ body {
     visibility: visible;
     opacity: 1;
 }
+
