@@ -174,3 +174,27 @@ function closeModal() {
     document.getElementById("orderModal").style.display = "none";
 }
 
+
+
+
+// USER PURCHASE REVIEW
+
+document.addEventListener("DOMContentLoaded", function () {
+    const overlay = document.getElementById("orderOverlay");
+    const openBtn = document.getElementById("openModal");
+    const closeBtn = document.querySelector(".close-btn");
+
+    openBtn.addEventListener("click", () => {
+        overlay.classList.add("show");
+    });
+
+    closeBtn.addEventListener("click", () => {
+        overlay.classList.remove("show");
+    });
+
+    overlay.addEventListener("click", (e) => {
+        if (e.target === overlay) {
+            overlay.classList.remove("show");
+        }
+    });
+});
