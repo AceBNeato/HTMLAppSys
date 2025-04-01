@@ -532,105 +532,95 @@ img#login-overlay {
 }
 
 
-.cart{
-    width: 80%;
-    margin-left: 140px;
+/* ===================== General Cart Styling ===================== */
+
+.cart {
+    width: 100%;
 }
+
 
 .cart-menu-card {
     display: flex;
-    width: 71vw;
+    align-items: center;
+    justify-content: space-evenly;
     background: white;
     border-radius: 10px;
     padding: 2vw;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
     margin: 50px 50px 0px 30px;
 }
- .cart-menu-details{
+
+
+.cart-menu-details {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 2vw;
     font-weight: 700;
     margin-left: 20px;
- }
+}
 
- .cart-menu-details h2{
+.cart-menu-details h2 {
     font-size: 20px;
- }
+}
 
- .cart-price, h3{
+
+.cart-price,
+.cart-final-price,
+h3 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 20px;
-    margin-top: 60px;
-    margin-left: 60px;
     font-weight: bold;
+    margin: 0px 2%0px 0px 20px;
+}
 
- }
 
- .cart-final-price, h3{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 20px;
-    margin-top: 60px;
-    margin-left: 150px;
-    font-weight: bold;
- }
 
- .cart-header {
+.cart-header {
     position: sticky;
     top: 0;
     display: flex;
+    justify-content: center;
     padding: 10px;
     background-color: #FFFAEE;
     box-shadow: 0px 1px 10px #D7BFA5;
     z-index: 10;
 }
 
-.Back{
-    margin-top: 35px;
-    margin-left: 40px;
-}
-
-#cart-logo{
+#cart-logo {
     margin-left: 70px;
 }
 
-.minus{
+.minus,
+.quantity,
+.plus {
+    display: flex;
+    justify-content: center;
+    height: 20px;
+    width: 30px;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0px 10px 0px 10px;
+}
+
+h3 {
     margin-left: 150px;
-    height: 20px;
-    margin-top: 60px;
-    width: 30px;
-    border: 1px solid black;
+    cursor: pointer;
+    color: red;
 }
 
-.quantity{
-    height: 20px;
-    margin-top: 60px;
-    width: 30px;
-    border: 1px solid black;
-}
 
-.plus{
-    height: 20px;
-    margin-top: 60px;
-    width: 30px;
-    border: 1px solid black;
-}
-
- h3{
-    margin-left: 150px;
- }
-
- .arrow{
+.arrow {
+    justify-content: start;
     margin-top: 30px;
-    margin-left: 50px;
     height: 30px;
     width: 30px;
- }
+    cursor: pointer;
+}
 
-=======
+
 /* PURCHASE REVIEW */
-
-
 /* Overlay Background */
 .overlay {
     position: fixed;
@@ -673,10 +663,6 @@ img#login-overlay {
     margin: 5px 0;
 }
 
-.price {
-    font-weight: bold;
-    color: #333;
-}
 
 .variation-box {
     background: #f5eee5;
@@ -708,11 +694,6 @@ img#login-overlay {
     margin: 5px 0;
 }
 
-.quantity {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-}
 
 .quantity button {
     background: #ddd;

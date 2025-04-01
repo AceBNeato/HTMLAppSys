@@ -2,71 +2,83 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../../css/menu.css">
+    <link rel="stylesheet" href="/css/menu.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
+   
+    <!-- Header Section -->
     <header class="cart-header">
-        <a href="/views/users/user-menu.html"><img src="../../images/Arrow.png" class="arrow"></a>
-        <img src="../../images/LOGO.png" id="cart-logo" alt="Cuptain's Brew Logo">
-        </header>
+        <div class="cart-header-container" style="display: flex; justify-content: space-evenly;">
+            <a href="/views/users/user-menu.html">
+                <img src="/images/Arrow.png" class="arrow">
+            </a>
+            <img src="/images/LOGO.png" id="cart-logo" alt="Cuptain's Brew Logo"></div>
+    </header>
+
+    <!-- Cart Container -->
     <div class="cart">
-        <div class="scroll-down-menu">
+        <div class="scroll-down-menu" style="display: grid; ">
+            
+            <!-- Cart Item 1 -->
             <div class="cart-menu-card">
-                <img src="../../images/item/coffee/latte 2.png" id="menu-img" alt="Cafe Latte">
+                <img src="/images/item/coffee/latte 2.png" id="menu-img" alt="Cafe Latte">
                 <div class="cart-menu-details">
                     <h2>Caffe Latte</h2>
-                    </div>
-                    <p class="cart-price">P 100</p>
-                    <div class="minus">-</div>
-                    <div class="quantity">1</div>
-                    <div class="plus">+</div>
-                    <p class="cart-final-price">P 115</p>
-                    <h3>Delete</h3>
-                    </div>
-    
-                    <div class="cart-menu-card">
-                        <img src="../../images/item/Frappe/strawberry 1.png" id="menu-img" alt="Strawberry">
-                        <div class="cart-menu-details">
-                            <h2>Strawberry</h2>
-                            </div>
-                            <p class="cart-price" style="margin-left: 65px;">P 150</p>
-                            <div class="minus">-</div>
-                            <div class="quantity">1</div>
-                            <div class="plus">+</div>
-                            <p class="cart-final-price">P 165</p>
-                            <h3>Delete</h3>
+                </div>
+                <p class="cart-price">₱ 100</p>
+                <div class="minus">-</div>
+                <div class="quantity">1</div>
+                <div class="plus">+</div>
+                <p class="cart-final-price">₱ 115</p>
+                <h3>Delete</h3>
+            </div>
 
-                            </div>
-    
-                <div class="cart-menu-card">
-                <img src="../../images/item/Milktea/choco 1.png" id="menu-img" alt="Chocolate">
+            <!-- Cart Item 2 -->
+            <div class="cart-menu-card">
+                <img src="/images/item/Frappe/strawberry 1.png" id="menu-img" alt="Strawberry">
+                <div class="cart-menu-details">
+                    <h2>Strawberry</h2>
+                </div>
+                <p class="cart-price">₱ 150</p>
+                <div class="minus">-</div>
+                <div class="quantity">1</div>
+                <div class="plus">+</div>
+                <p class="cart-final-price">₱ 165</p>
+                <h3>Delete</h3>
+            </div>
+
+            <!-- Cart Item 3 -->
+            <div class="cart-menu-card">
+                <img src="/images/item/Milktea/choco 1.png" id="menu-img" alt="Chocolate">
                 <div class="cart-menu-details">
                     <h2>Chocolate</h2>
-                    </div>
-                    <p class="cart-price" style="margin-left: 90px;">P 89</p>
-                    <div class="minus">-</div>
-                    <div class="quantity">1</div>
-                    <div class="plus">+</div>
-                    <p class="cart-final-price">P 109</p>
-                    <h3>Delete</h3>
-                    </div>
-    
-                <div class="cart-menu-card">
-                    <img src="../../images/item/non-coffee/berry 1.png" id="menu-img" alt="Choco Berry">
-                    <div class="cart-menu-details">
-                        <h2>Choco Berry</h2>
-                        </div>
-                        <p class="cart-price">P 125</p>
-                        <div class="minus">-</div>
-                        <div class="quantity">1</div>
-                        <div class="plus">+</div>
-                        <p class="cart-final-price">P 125</p>
-                        <h3>Delete</h3>
-                        </div>
+                </div>
+                <p class="cart-price">₱ 89</p>
+                <div class="minus">-</div>
+                <div class="quantity">1</div>
+                <div class="plus">+</div>
+                <p class="cart-final-price">₱ 109</p>
+                <h3>Delete</h3>
             </div>
-        </div>   
-    </div>
+
+            <!-- Cart Item 4 -->
+            <div class="cart-menu-card">
+                <img src="/images/item/non-coffee/berry 1.png" id="menu-img" alt="Choco Berry">
+                <div class="cart-menu-details">
+                    <h2>Choco Berry</h2>
+                </div>
+                <p class="cart-price">₱ 125</p>
+                <div class="minus">-</div>
+                <div class="quantity">1</div>
+                <div class="plus">+</div>
+                <p class="cart-final-price">₱ 125</p>
+                <h3>Delete</h3>
+            </div>
+
+        </div> <!-- End of Scroll Down Menu -->
+    </div> <!-- End of Cart Container -->
+
 </body>
 </html>
