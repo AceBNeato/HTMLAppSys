@@ -9,10 +9,11 @@ body {
     padding: 0;
 }
 
-/* Header */
+
 .header {
     position: sticky;
     top: 0;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -20,6 +21,7 @@ body {
     background-color: #FFFAEE;
     box-shadow: 0px 1px 10px #D7BFA5;
     z-index: 10;
+
 }
 
 #logo {
@@ -41,16 +43,16 @@ body {
     color: black;
     width: 5vw;
     text-decoration: none;
-    padding: 10px 20px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
 }
 
-.nav-button.active {
-    background-color: #D7BFA5;
-    color: black;
-    font-weight: bold;
-    border-radius: 8px;
+.nav-button.active, .nav-button:hover {
+    background-color: #4a3b2b;
+    color: white;
 }
 
 /* Image Containers */
@@ -249,6 +251,7 @@ img#login-overlay {
     padding: 1vw 2vw 1vw 2vw;
     font-weight: 400;
     cursor: pointer;
+    transition: .5s;
 }
 
 .menu-item:hover {
@@ -281,7 +284,7 @@ img#login-overlay {
 .menu-cart{
     border-radius: 10px;
     display: grid;
-    top: 200px;
+    top: 190px;
     position: sticky;
     box-shadow: 1px 1px 10px #4a3b2b;
     margin: 0px;
@@ -290,6 +293,7 @@ img#login-overlay {
     flex-direction: row;
     height: 490px;
     grid-template-rows: 100px 100px 100px 100px;
+   
 }
 
 .menu-cart-container{
@@ -342,7 +346,7 @@ img#login-overlay {
     padding: 2vw;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    margin: 50px 50px 0px 30px;
+    margin: 40px 50px 0px 0px;
 }
 
 .menu-card.selected {
