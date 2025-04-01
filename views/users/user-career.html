@@ -7,34 +7,47 @@
     <title>Cuptain's Brew</title>
     <link rel="stylesheet" href="/css/style.css">
 
+
+
 </head>
 <body>
     <header class="header">
-    <img src="/images/LOGO.png" id="logo" alt="cuptainsbrewlogo">
+    <img src="../../images/LOGO.png" id="logo" alt="cuptainsbrewlogo">
 
     <!-- "nav-menu" is for mobile
     <button id="menu-toggle" class="menu-toggle"> ☰  </button> -->
 
     <nav class="button-container" id="nav-menu">
-        
+
         <a href="/views/users/user-home.html" class="nav-button" > Home</a>
         <a href="/views/users/user-menu.html" class="nav-button"> Menu</a>
         <a href="/views/users/user-career.html" class="nav-button" > Career</a>
         <a href="/views/users/user-aboutus.html" class="nav-button" > About Us</a>
 
+        
+        <div class="icon-container">
+            <a href="/views/users/cart.html" id="cart-icon" class="nav-icon">
+                <img src="/images/cart-icon.png" alt="Cart">
+            </a>
+        </div>
 
+        <div class="profile">
+            <img src="/images/profile-icon.png" alt="Profile"  >
+            <span>bfelladobas_06</span>
+            <div class="dropdown">
+                <a href="/views/users/profile.html">My Account</a>
+                <a href="#">My Purchase</a>
+                <a id="logout-button">Logout</a>
+            </div>
+        </div>
 
-        <a href="../views/cart.html" id="cart-icon" class="nav-icon">
-            <img src="../images/cart-icon.png" alt="Cart">
-        </a>
-        <a href="../views/profile.html" id="profile-icon" class="nav-icon ">
-            <img src="../images/profile-icon.png" alt="Profile">
-        </a>
     </nav>
+        
+
 </header>
 
     <div class="image-container">
-        <img src="../images/getstarted.png" alt="getstarted" id="getstarted">
+        <img src="../../images/getstarted.png" alt="getstarted" id="getstarted">
     </div>
     <div class="centered-home">
         <h1 class="glow">Captain's Brew Cafe</h1>
@@ -42,14 +55,14 @@
             Drop anchor, relax, and let your coffee journey begin! </p>
     
     
-    <a href="../views/auth/login.html" class="centered-button">Get Started</a>
+    <a href="../../views/auth/login.html" class="centered-button" id="view-menu-button">View our Menu</a>
     
     
     
     </div>
     
     <div class="menu-image-container">
-        <img src="../images/gsmenu.png" alt="gs-menu" id="gsmenu" >
+        <img src="../../images/gsmenu.png" alt="gs-menu" id="gsmenu" >
         <div class="centered-menu">
         <h1>MENU</h1>
         <p>Where every sip is an adventure. we've got your brew covered. <br>
@@ -57,8 +70,27 @@
     </div>
     </div>
 
+
+
+    <div class="carousel-container">
+        <div class="carousel-track">
+            <div class="carousel-item"><img src="../../images/carousel-img/img-1.png" alt="Slide 1"></div>
+            <div class="carousel-item"><img src="../../images/carousel-img/img-2.png" alt="Slide 2"></div>
+            <div class="carousel-item"><img src="../../images/carousel-img/img-3.png" alt="Slide 3"></div>
+            <div class="carousel-item"><img src="../../images/carousel-img/img-4.png" alt="Slide 4"></div>
+            
+        </div>
+    </div>
+
+
+
+    <button id="back-to-top" ><img src="/images/top-icon.png" alt="Go to Top"></button>
+
+
+
     <script src="../../js/auth.js"></script>
     <script src="../../js/script.js"></script>
     <script src="../../js/user-menu.js"></script>
+
 </body>
 </html>

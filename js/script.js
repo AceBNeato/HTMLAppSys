@@ -114,3 +114,30 @@ document.addEventListener("DOMContentLoaded", function () {
         track.appendChild(clone);
     });
 });
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const backToTop = document.getElementById("back-to-top");
+
+    if (!backToTop) {
+        console.error("Back to Top button not found!");
+        return;
+    }
+
+    // Show the button when scrolling past 300px
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 300) {
+            backToTop.classList.add("show");
+        } else {
+            backToTop.classList.remove("show");
+        }
+    });
+
+    // Scroll smoothly back to top when clicked
+    backToTop.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+});
+
