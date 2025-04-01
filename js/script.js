@@ -1,4 +1,7 @@
 
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
     const navbutton = document.querySelectorAll(".nav-button");
 
@@ -12,12 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
-
-
-
-
-
-
 
 
 
@@ -141,3 +138,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+
+
+//SHOW PASSWORD//
+document.getElementById("showPassword").addEventListener("change", function() {
+    let passwordInput = document.getElementById("password");
+    passwordInput.type = this.checked ? "text" : "password";
+});

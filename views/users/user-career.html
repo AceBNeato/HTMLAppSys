@@ -46,48 +46,96 @@
 
 </header>
 
-    <div class="image-container">
-        <img src="../../images/getstarted.png" alt="getstarted" id="getstarted">
-    </div>
-    <div class="centered-home">
-        <h1 class="glow">Captain's Brew Cafe</h1>
-        <p>Where every sip is an adventure. we've got your brew covered. <br>
-            Drop anchor, relax, and let your coffee journey begin! </p>
-    
-    
-    <a href="../../views/auth/login.html" class="centered-button" id="view-menu-button">View our Menu</a>
-    
-    
-    
-    </div>
-    
-    <div class="menu-image-container">
-        <img src="../../images/gsmenu.png" alt="gs-menu" id="gsmenu" >
-        <div class="centered-menu">
-        <h1>MENU</h1>
-        <p>Where every sip is an adventure. we've got your brew covered. <br>
-            Drop anchor, relax, and let your coffee journey begin! </p>
-    </div>
-    </div>
+<div class="image-container">
+    <img src="/images/careerbg.png" alt="getstarted" id="getstarted" style="width: 100vw;">
+</div>
+<div class="centered-home" style="bottom: 35vw;">
+    <h1 class="glow">CAREERS</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>
+        porttitor dolor nec, maximus justo. </p>
 
 
 
-    <div class="carousel-container">
-        <div class="carousel-track">
-            <div class="carousel-item"><img src="../../images/carousel-img/img-1.png" alt="Slide 1"></div>
-            <div class="carousel-item"><img src="../../images/carousel-img/img-2.png" alt="Slide 2"></div>
-            <div class="carousel-item"><img src="../../images/carousel-img/img-3.png" alt="Slide 3"></div>
-            <div class="carousel-item"><img src="../../images/carousel-img/img-4.png" alt="Slide 4"></div>
-            
+
+</div>
+
+
+<div class="form-container">
+    <form id="jobForm">
+        <label>First Name*</label>
+        <input type="text" id="firstName" required>
+        
+        <label>Last Name*</label>
+        <input type="text" id="lastName" required>
+        
+        <label>Mobile Number*</label>
+        <input type="text" id="mobileNumber" required>
+        
+        <label>E-Mail Address*</label>
+        <input type="email" id="email" required>
+        
+        <label>Position Applying For*</label>
+        <input type="text" id="position" required>
+        
+        <label>Resume / CV*</label>
+        <input type="file" id="resume" accept=".pdf,.doc,.docx" required>
+        
+        <div class="checkbox-container">
+            <input type="checkbox" id="terms" required>
+            <label for="terms">I agree to the Terms and Conditions</label>
         </div>
+        
+        <div class="submit-container">
+            <button id="submitBtn">Submit</button>
+        </div>
+        
+    </form>
+</div>
+
+<button id="back-to-top" ><img src="/images/top-icon.png" alt="Go to Top"></button>
+
+
+
+
+ 
+<footer>
+<div class="footer-container" style="display: flex;">
+   
+    <div class="footer-left" >
+        <div class="footer-links" style="display: flex; flex-direction: column;">
+            <ul>
+                <li><a href="/views/home.html">Home</a></li>
+                <li><a href="/views/aboutus.html">About Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-social">
+            <a href="#"><img src="/images/facebook.png" style="width: 2vw;" alt="facebook"><i class="fab fa-facebook"></i> </a>
+            <a href="#"><img src="/images/twitter.png" style="width: 2vw;" alt="twitter" alt=""><i class="fab fa-twitter"></i></a>
+            <a href="#"><img src="/images/instagram.png" style="width: 2vw;" alt="instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+        
+    </div>
+    
+    <div class="footer-right" style="display: flex;">
+        <div class="footer-contact">
+            <h3>CONTACT US</h3>
+            <p>123 Coffee Street, City Name</p>
+            <p><strong>Phone:</strong> +1 800 555 6789</p>
+            <p><strong>E-mail:</strong> support@cuptainsbrew.com</p>
+            <p><strong>Website:</strong> www.cuptainsbrew.com</p>
+        </div>
+            
     </div>
 
 
+</div>
 
-    <button id="back-to-top" ><img src="/images/top-icon.png" alt="Go to Top"></button>
+<div class="footer-bottom">
+<p>© Copyright 2025 Cuptain’s Brew Cafe. All Rights Reserved.</p>
+</div>
 
 
-
+</footer>
     <script src="../../js/auth.js"></script>
     <script src="../../js/script.js"></script>
     <script src="../../js/user-menu.js"></script>
