@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: #FFFAEE;
+    background-color: #1a1310;
     margin: 0;
     padding: 0;
 }
@@ -35,6 +35,11 @@ body {
     transition: 0.4s;
 }
 
+
+.menu-image-container{
+    position: relative;
+    bottom: 10vw;
+}
 
 .menu-item {
     color: #513726;
@@ -84,8 +89,7 @@ body {
 }
 
 /* Image Containers */
-.image-container #getstarted,
-img#login-overlay {
+.image-container #getstarted{
 
     position: relative;
     width: 100%;
@@ -175,7 +179,6 @@ img#login-overlay {
 
 .centered-menu{
     position: relative;
-    bottom: 25vw;
     text-align: center;
     color: #FFFAEE;
     font-size: 3vw;
@@ -251,8 +254,7 @@ img#login-overlay {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 3vw;
-    margin-bottom: 5vw;
+    padding: 3vw 0vw 5vw 0vw;
     background-color: #FFFAEE;
 
 
@@ -315,6 +317,10 @@ img#login-overlay {
     display: flex;
     justify-content: space-between;
 }
+
+
+
+
 
 .register-container-button{
     text-align: center;
@@ -384,6 +390,11 @@ img#login-overlay {
 
 
 
+/* END OF LOGIN */
+
+
+
+
 
 
 
@@ -417,10 +428,37 @@ img#login-overlay {
     100% { transform: rotate(360deg); }
 }
 
+/* Back to Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #4a3b2b;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    display: none; /* Initially hidden */
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s, transform 0.3s;
+}
 
+/* Hover Effect */
+#back-to-top:hover {
+    background-color: #D7BFA5;
+    transform: scale(1.1);
+}
 
-
-
+/* Show Button */
+.show {
+    display: flex !important;
+    opacity: 1;
+}
 
 
 
@@ -472,7 +510,6 @@ img#login-overlay {
     overflow: hidden;
     position: relative;
     white-space: nowrap;
-    bottom: 14vw;
 }
 
 
@@ -508,6 +545,161 @@ img#login-overlay {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); } /* Adjust to half for continuous loop */
 }
+
+
+
+
+/* CAREERS */
+.form-container {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-self: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px #FFFAEE;
+    width: 95%;
+}
+.form-container > #jobForm{
+    display: grid;
+    justify-content: center;
+    
+}
+
+input, label {
+    display: block;
+    margin-bottom: 10px;
+}
+input[type="text"], input[type="email"], input[type="file"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 93vw;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+}
+.checkbox-container input {
+    width: auto;
+    margin-right: 5px;
+}
+
+.submit-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+#submitBtn {
+    width: 10vw;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+
+button:disabled {
+    background-color: #ccc;
+}
+
+
+
+
+/* FOOTER */
+footer {
+    background-color: #1a1310;
+    color: #fff;
+    text-align: center;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-logo h2 {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-links ul li a:hover {
+    color: #c49a6c;
+}
+
+.footer-contact h3 {
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.footer-contact p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.footer-social {
+    margin-top: 20px;
+}
+
+.footer-social a {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 20px;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.footer-social a:hover {
+    color: #c49a6c;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

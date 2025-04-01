@@ -1,4 +1,7 @@
 
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
     const navbutton = document.querySelectorAll(".nav-button");
 
@@ -12,12 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
-
-
-
-
-
-
 
 
 
@@ -113,4 +110,38 @@ document.addEventListener("DOMContentLoaded", function () {
         let clone = item.cloneNode(true);
         track.appendChild(clone);
     });
+});
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const backToTop = document.getElementById("back-to-top");
+
+    if (!backToTop) {
+        console.error("Back to Top button not found!");
+        return;
+    }
+
+    // Show the button when scrolling past 300px
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 300) {
+            backToTop.classList.add("show");
+        } else {
+            backToTop.classList.remove("show");
+        }
+    });
+
+    // Scroll smoothly back to top when clicked
+    backToTop.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+});
+
+
+
+//SHOW PASSWORD//
+document.getElementById("showPassword").addEventListener("change", function() {
+    let passwordInput = document.getElementById("password");
+    passwordInput.type = this.checked ? "text" : "password";
 });

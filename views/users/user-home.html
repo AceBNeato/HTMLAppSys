@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cuptain's Brew</title>
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 
 
 
@@ -27,14 +27,20 @@
         
         <div class="icon-container">
             <a href="/views/users/cart.html" id="cart-icon" class="nav-icon">
-                <img src="../../images/cart-icon.png" alt="Cart">
+                <img src="/images/cart-icon.png" alt="Cart">
             </a>
         </div>
 
         <div class="profile">
-            <img src="../../images/profile-icon.png" alt="Profile">
+
+
+            <img src="/images/profile-icon.png" alt="Profile"  >
+            <span>bfelladobas_06</span>
             <div class="dropdown">
-                <a id="logout-button" class="nav-button">Logout</a>
+                <a href="/views/users/profile.html">My Account</a>
+                <a href="#">My Purchase</a>
+                <a id="logout-button">Logout</a>
+
             </div>
         </div>
 
@@ -43,41 +49,89 @@
 
 </header>
 
-    <div class="image-container">
-        <img src="../../images/getstarted.png" alt="getstarted" id="getstarted">
-    </div>
-    <div class="centered-home">
-        <h1 class="glow">Captain's Brew Cafe</h1>
-        <p>Where every sip is an adventure. we've got your brew covered. <br>
-            Drop anchor, relax, and let your coffee journey begin! </p>
+<div class="image-container">
+    <img src="/images/getstarted.png" alt="getstarted" id="getstarted">
+</div>
+<div class="centered-home">
+    <h1 class="glow">Captain's Brew Cafe</h1>
+    <p>Where every sip is an adventure. we've got your brew covered. <br>
+        Drop anchor, relax, and let your coffee journey begin! </p>
+
+
+<a href="/views/auth/login.html" class="centered-button" id="view-menu-button">Get Started</a>
+
+
+
+</div>
+
+<div class="menu-image-container">
     
-    
-    <a href="../../views/auth/login.html" class="centered-button" id="view-menu-button">Get Started</a>
-    
-    
-    
-    </div>
-    
-    <div class="menu-image-container">
-        <img src="../../images/gsmenu.png" alt="gs-menu" id="gsmenu" >
         <div class="centered-menu">
-        <h1>MENU</h1>
-        <p>Where every sip is an adventure. we've got your brew covered. <br>
-            Drop anchor, relax, and let your coffee journey begin! </p>
+            <h1>MENU</h1>
+            <p>Where every sip is an adventure. we've got your brew covered. <br>
+                Drop anchor, relax, and let your coffee journey begin! </p>
+            </div>       
+
     </div>
+    
+
+ <div class="carousel-container" style="background-color: antiquewhite;">
+
+    
+    
+    <h1 style="color: white;">   ═══════════════════════════════════════════════════════════════════════════════════════════</h1>
+    <div class="carousel-track">
+        <div class="carousel-item"><img src="/images/carousel-img/img-1.png" alt="Slide 1"></div>
+        <div class="carousel-item"><img src="/images/carousel-img/img-2.png" alt="Slide 2"></div>
+        <div class="carousel-item"><img src="/images/carousel-img/img-3.png" alt="Slide 3"></div>
+        <div class="carousel-item"><img src="/images/carousel-img/img-4.png" alt="Slide 4"></div>
+     
     </div>
+    <h1 style="color: white;">    ═══════════════════════════════════════════════════════════════════════════════════════════</h1>
+</div>
+
+<button id="back-to-top" ><img src="/images/top-icon.png" alt="Go to Top"></button>
 
 
-
-    <div class="carousel-container">
-        <div class="carousel-track">
-            <div class="carousel-item"><img src="../../images/carousel-img/img-1.png" alt="Slide 1"></div>
-            <div class="carousel-item"><img src="../../images/carousel-img/img-2.png" alt="Slide 2"></div>
-            <div class="carousel-item"><img src="../../images/carousel-img/img-3.png" alt="Slide 3"></div>
-            <div class="carousel-item"><img src="../../images/carousel-img/img-4.png" alt="Slide 4"></div>
-            
+ 
+<footer>
+<div class="footer-container" style="display: flex;">
+   
+    <div class="footer-left" >
+        <div class="footer-links" style="display: flex; flex-direction: column;">
+            <ul>
+                <li><a href="/views/home.html">Home</a></li>
+                <li><a href="/views/aboutus.html">About Us</a></li>
+            </ul>
         </div>
+        <div class="footer-social">
+            <a href="#"><img src="/images/facebook.png" style="width: 2vw;" alt="facebook"><i class="fab fa-facebook"></i> </a>
+            <a href="#"><img src="/images/twitter.png" style="width: 2vw;" alt="twitter" alt=""><i class="fab fa-twitter"></i></a>
+            <a href="#"><img src="/images/instagram.png" style="width: 2vw;" alt="instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+        
     </div>
+    
+    <div class="footer-right" style="display: flex;">
+        <div class="footer-contact">
+            <h3>CONTACT US</h3>
+            <p>123 Coffee Street, City Name</p>
+            <p><strong>Phone:</strong> +1 800 555 6789</p>
+            <p><strong>E-mail:</strong> support@cuptainsbrew.com</p>
+            <p><strong>Website:</strong> www.cuptainsbrew.com</p>
+        </div>
+            
+    </div>
+
+
+</div>
+
+<div class="footer-bottom">
+<p>© Copyright 2025 Cuptain’s Brew Cafe. All Rights Reserved.</p>
+</div>
+
+
+</footer>
 
 
     <script src="../../js/auth.js"></script>

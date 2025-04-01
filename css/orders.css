@@ -10,7 +10,6 @@ body {
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
     text-align: center;
 }
 th, td {
@@ -106,12 +105,10 @@ button:disabled {
 
 /* Sidebar Styles */
 .sidebar {
-    position: absolute;
     width: 250px;
-    top: 10vw;
     background: #ffffff;
     color: white;
-    height: auto;
+    margin-top: 40px;
 }
 
 
@@ -136,6 +133,7 @@ button:disabled {
     background: #D7BFA5;
 }
 
+
 .menu-bar.active{
       background: #D7BFA5;
 }
@@ -147,7 +145,6 @@ button:disabled {
 
 .content{
     flex-grow: 1;
-    margin-left: 225px;
     padding: 20px;
 }
 

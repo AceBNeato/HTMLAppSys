@@ -1,6 +1,6 @@
 document.addEventListener("keydown", function (event) {
     // Detect "Ctrl + Shift + S"
-    if (event.ctrlKey && event.shiftKey && event.key.toLowerCase() === "s") {
+    if (event.ctrlKey && event.shiftKey && event.key.toLowerCase() === "q") {
         console.log("Admin shortcut detected!");
         
         // Store admin login status
@@ -11,7 +11,22 @@ document.addEventListener("keydown", function (event) {
 
         // Redirect to Admin Dashboard (Change the URL if needed)
         window.location.href = "/views/auth/admin-login.html";
-    }
+    } 
+});
+
+document.addEventListener("keydown", function (event) {
+if (event.ctrlKey && event.shiftKey && event.key.toLowerCase() === "s") {
+    console.log("User shortcut detected!");
+    
+    // Store admin login status
+    localStorage.setItem("userRole", "user");
+
+    // Show confirmation
+    alert("Going back to users");
+
+    // Redirect to Admin Dashboard (Change the URL if needed)
+    window.location.href = "/views/auth/login.html";
+}
 });
 
 
@@ -332,3 +347,17 @@ document.addEventListener("DOMContentLoaded", function() {
     displayUsers();
 });
 
+
+
+
+
+
+
+
+
+// CAREERS
+
+document.getElementById('jobForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Form submitted successfully!');
+});
